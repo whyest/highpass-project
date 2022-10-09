@@ -1,0 +1,27 @@
+.header {
+	background-color: var(--dark-color);
+
+	&__container {
+		@include flex-v-center;
+
+		min-height: 80px;
+
+		.logo {
+			margin-right: 139px;
+			outline: none;
+		}
+
+		.form {
+			margin-left: auto;
+
+			&__btn {
+				outline: none;
+
+				&:focus svg {
+					fill: var(--tuscany-color);
+					transition: fill 0.3s ease-in-out;
+				}
+			}
+		}
+	}
+}

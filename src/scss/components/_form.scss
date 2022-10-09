@@ -1,0 +1,13 @@
+.form {
+	&__label {
+		display: none;
+	}
+
+	&__btn {
+		svg {
+			width: 25px;
+			height: 25px;
+			fill: var(--light-color);
+		}
+	}
+}

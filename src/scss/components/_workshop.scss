@@ -1,0 +1,84 @@
+.workshop {
+	margin-top: 41px;
+	margin-bottom: var(--section-gap);
+	background-color: var(--light-color);
+
+	&__left {
+		// min-height: 630px;
+	}
+
+	&__right {
+		.works__list {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 26px 30px;
+
+			.works__item--1 {
+				grid-column: 6 span;
+			}
+			.works__item--2 {
+				grid-column: 3 span;
+			}
+			.works__item--3 {
+				grid-column: 3 span;
+			}
+		}
+	}
+
+	&__article {
+		padding: 60px;
+		position: relative;
+
+		background-image: url('../img/pic-main.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__hash {
+		padding: 7px 15px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--light-color);
+		background-color: var(--dark-color);
+	}
+
+	&__title-text {
+		margin: 0;
+		margin-bottom: 3px;
+		display: block;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 17px;
+		color: var(--light-color);
+	}
+
+	&__title {
+		margin: 0;
+		margin-top: 68%;
+		margin-bottom: 19px;
+		font-family: 'TTFirsNeue';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 104%;
+		color: var(--light-color);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(1, 630px);
+		gap: var(--grid-gap);
+	}
+
+	&__item {
+		grid-column: 6 span;
+	}
+}
