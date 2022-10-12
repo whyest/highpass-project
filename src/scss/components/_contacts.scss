@@ -7,7 +7,7 @@
 		margin-bottom: 24px;
 	}
 
-	&__list {
+	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 30px;
@@ -213,7 +213,7 @@
 
 		&--textarea {
 			margin-bottom: 21px;
-			padding-top: 15px;
+			padding: 15px 20px;
 			height: 150px;
 			resize: none;
 		}

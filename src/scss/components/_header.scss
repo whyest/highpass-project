@@ -9,6 +9,12 @@
 		.logo {
 			margin-right: 139px;
 			outline: none;
+
+			@include tablet {
+				width: 166px;
+				height: 27px;
+				margin-right: 82px;
+			}
 		}
 
 		.form {

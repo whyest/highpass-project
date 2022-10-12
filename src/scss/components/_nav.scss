@@ -35,12 +35,12 @@
 		}
 
 		&:focus-visible {
-			&::after {
+			&:not(:active)::after {
 				opacity: 1;
 			}
 		}
 
-		&:hover {
+		&:hover:not(:active) {
 			color: var(--accent-color);
 		}
 

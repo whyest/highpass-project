@@ -1,21 +1,19 @@
 .footer {
-	@include flex-v-center;
-
 	padding-top: 24px;
 	padding-bottom: 16px;
-	height: 106px;
+	min-height: 106px;
 	background-color: var(--dark-color);
 
 	&__container {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		gap: var(--grid-gap);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	&__logo {
 		@include flex-col-center;
-
-		grid-column: 4 span;
+		min-width: 263px;
 	}
 
 	&__logo-img {
@@ -35,9 +33,8 @@
 
 	&__quote {
 		@include flex-col-center;
-
-		grid-column: 4 span;
-		width: 90%;
+		max-width: 361px;
+		transform: translateX(-76px);
 	}
 
 	&__text {
@@ -50,12 +47,14 @@
 
 		&--right {
 			margin-bottom: 10px;
+
+			@include high-tablet {
+				width: 161px;
+			}
 		}
 	}
 
 	&__social {
-		grid-column: 11 / 2 span;
-
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
