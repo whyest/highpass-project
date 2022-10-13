@@ -1,19 +1,19 @@
-let center = [55.76953456898229, 37.63998549999998];
+let point = [55.76958295366031, 37.63949197354125];
 
 function init() {
 	let map = new ymaps.Map('map', {
-		center: center,
-		zoom: 14,
+		center: [55.766263424694785, 37.63093268928248],
+		zoom: 15,
 	});
 
 	let placemark = new ymaps.Placemark(
-		center,
+		point,
 		{},
 		{
 			iconLayout: 'default#image',
 			iconImageHref: '../img/placemark.png',
 			iconImageSize: [12, 12],
-			iconImageOffset: [-20, 2],
+			iconImageOffset: [-14, 3],
 		}
 	);
 

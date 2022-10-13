@@ -2,7 +2,17 @@ import { validateForms } from '../functions/validate-forms';
 
 const rules = [
 	{
-		ruleSelector: '.input-email',
+		ruleSelector: '.contacts__input-name',
+		rules: [
+			{
+				rule: 'required',
+				value: true,
+				errorMessage: 'Заполните имя!',
+			},
+		],
+	},
+	{
+		ruleSelector: '.contacts__input-email',
 		rules: [
 			{
 				rule: 'required',
@@ -22,4 +32,4 @@ const afterForm = () => {
 	console.log('Произошла отправка, тут можно писать любые действия');
 };
 
-validateForms('.about__form', rules, afterForm);
+validateForms('.contacts__form', rules, afterForm);

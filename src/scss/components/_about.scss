@@ -55,6 +55,7 @@
 	}
 
 	&__label {
+		position: relative;
 		width: 100%;
 		font-style: normal;
 		font-weight: 400;
@@ -63,9 +64,13 @@
 	}
 
 	.just-validate-error-label {
-		// margin-bottom: 3px;
+		position: absolute;
 		color: var(--sienna-color) !important;
 		transform: translate(24px, -47px);
+	}
+
+	.just-validate-error-field {
+		border: 1px solid var(--sienna-color);
 	}
 
 	&__input {
@@ -131,9 +136,5 @@
 		padding: 10px 27px;
 		min-width: 126px;
 		height: 50px;
-	}
-
-	.just-validate-error-field {
-		border: 1px solid var(--sienna-color);
 	}
 }

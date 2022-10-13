@@ -52,6 +52,10 @@
 			visibility: visible;
 			transition: opacity 0.3s ease-in-out;
 
+			&__wrapper {
+				overflow: scroll;
+			}
+
 			&__title {
 				margin: 0;
 				margin-top: 25px;
@@ -75,6 +79,7 @@
 			}
 
 			&__phone {
+				position: relative;
 				margin: 0;
 				padding-left: 22px;
 				font-family: 'TTFirsNeue';
@@ -83,11 +88,38 @@
 				font-size: 16px;
 				line-height: 21px;
 				color: var(--accent-color);
+				z-index: 1;
+				outline: none;
 
 				background-image: url('../img/phone.svg');
 				background-position: left center;
 				background-size: 22px 22px;
 				background-repeat: no-repeat;
+
+				&::after {
+					content: '';
+					position: absolute;
+					inset: -4px;
+					z-index: -1;
+					background-color: var(--tuscany-color);
+					opacity: 0;
+					transition: opacity 0.3s ease-in-out;
+				}
+
+				&:focus-visible {
+					color: var(--light-color);
+					&:not(:active)::after {
+						opacity: 1;
+					}
+				}
+
+				&:hover:not(:active) {
+					color: var(--accent-color);
+				}
+
+				&:active {
+					color: var(--active-color);
+				}
 			}
 
 			&__btn {
@@ -140,15 +172,27 @@
 	}
 
 	&__label {
+		position: relative;
 		display: flex;
-		// flex-direction: column-reverse;
-		// margin-bottom: 10px;
+		flex-direction: column;
 		width: 100%;
 	}
 
 	.just-validate-error-label {
-		margin-bottom: 3px;
-		color: var(--light-color) !important;
+		position: absolute;
+		color: var(--red-color) !important;
+		transform: translate(24px, 4px);
+	}
+
+	.just-validate-error-field {
+		border: 1px solid var(--red-color);
+	}
+
+	&__label {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 9px;
+		line-height: 11px;
 	}
 
 	&__input {
