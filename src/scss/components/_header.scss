@@ -16,18 +16,5 @@
 				margin-right: 82px;
 			}
 		}
-
-		.form {
-			margin-left: auto;
-
-			&__btn {
-				outline: none;
-
-				&:focus svg {
-					fill: var(--tuscany-color);
-					transition: fill 0.3s ease-in-out;
-				}
-			}
-		}
 	}
 }

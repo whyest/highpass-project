@@ -1,8 +1,13 @@
 .social {
 	@include flex-v-center;
 
+	flex-wrap: wrap;
+	max-width: 170px;
+	margin-bottom: -20px;
+
 	&__item {
 		@include mr(20px);
+		margin-bottom: 20px;
 	}
 
 	&__link {

@@ -4,30 +4,35 @@
 	min-height: 106px;
 	background-color: var(--dark-color);
 
-	&__container {
-		// display: grid;
-		// grid-template-columns: repeat(12, 1fr);
-		// grid-auto-flow: row;
-		// gap: var(--grid-gap);
+	@include tablet {
+		padding-top: 21px;
+	}
 
+	&__container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	&__logo {
 		@include flex-col-center;
 
-		// grid-column: 4 span;
-
-		min-width: 263px;
+		max-height: 58px;
+		// min-width: 263px;
 	}
 
 	&__logo-img {
 		margin: 0;
-		margin-bottom: 5px;
+		margin-bottom: 1px;
 		outline: none;
+
+		@include tablet {
+			margin-bottom: 5px;
+			width: 166px;
+			height: 27px;
+		}
 	}
 
 	&__copyright {
@@ -43,10 +48,12 @@
 	&__quote {
 		@include flex-col-center;
 
-		// grid-column: 4 span;
-
 		max-width: 361px;
-		transform: translateX(-76px);
+		transform: translateX(-63px);
+
+		@include tablet {
+			transform: translate(34px, 3px);
+		}
 	}
 
 	&__text {
@@ -67,8 +74,6 @@
 	}
 
 	&__social {
-		// grid-column: 11 / 2 span;
-
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;

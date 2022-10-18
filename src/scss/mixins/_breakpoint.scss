@@ -11,6 +11,11 @@
 		@content;
 	}
 }
+@mixin small-desktop {
+	@media (max-width: (1295px)) {
+		@content;
+	}
+}
 
 @mixin high-tablet {
 	@media (max-width: (1200px)) {

@@ -3,6 +3,10 @@
 	padding-bottom: 69px;
 	background-color: var(--light-color);
 
+	@include tablet {
+		padding-bottom: 68px;
+	}
+
 	&__title {
 		margin-bottom: 24px;
 	}
@@ -11,6 +15,10 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 30px;
+
+		@include tablet {
+			grid-template-columns: repeat(8, 1fr);
+		}
 	}
 
 	&__item:first-of-type {
@@ -18,10 +26,18 @@
 
 		grid-column: 8 span;
 		background-color: var(--dusty-color);
+
+		@include tablet {
+			grid-column: 5 span;
+		}
 	}
 
 	&__item {
 		grid-column: 4 span;
+
+		@include tablet {
+			grid-column: 3 span;
+		}
 	}
 
 	.map-container {
@@ -52,9 +68,24 @@
 			visibility: visible;
 			transition: opacity 0.3s ease-in-out;
 
-			&__wrapper {
-				overflow: scroll;
+			@include tablet {
+				top: unset;
+				right: 0;
+				bottom: 0;
+				padding: 24px 30px;
+				width: 100%;
+				height: 34%;
 			}
+
+			&__wrapper {
+				@include tablet {
+					max-width: 58%;
+				}
+			}
+
+			// &__content {
+			// 	max-width: 56%;
+			// }
 
 			&__title {
 				margin: 0;
@@ -66,6 +97,10 @@
 				font-size: 24px;
 				line-height: 22px;
 				color: var(--light-color);
+
+				@include tablet {
+					margin-top: 0;
+				}
 			}
 
 			&__descr {
@@ -76,6 +111,11 @@
 				font-size: 16px;
 				line-height: 28px;
 				color: var(--silver-color);
+
+				@include tablet {
+					display: inline;
+					margin-right: 10px;
+				}
 			}
 
 			&__phone {
@@ -169,6 +209,10 @@
 		align-items: flex-start;
 		width: 100%;
 		max-width: 410px;
+
+		@include tablet {
+			max-width: 342px;
+		}
 	}
 
 	&__label {

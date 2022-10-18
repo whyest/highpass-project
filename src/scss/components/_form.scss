@@ -1,13 +1,21 @@
-.form {
+.header-form {
+	margin-left: auto;
+
 	&__label {
 		display: none;
 	}
 
 	&__btn {
+		outline: none;
 		svg {
 			width: 25px;
 			height: 25px;
 			fill: var(--light-color);
+		}
+
+		&:focus svg {
+			fill: var(--tuscany-color);
+			transition: fill 0.3s ease-in-out;
 		}
 	}
 }
