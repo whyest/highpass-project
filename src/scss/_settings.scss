@@ -16,6 +16,14 @@ html {
 	@include tablet {
 		--container-offset: 31px;
 	}
+
+	@include small-tablet {
+		--container-offset: 27px;
+	}
+
+	@include mobile {
+		--container-offset: 21px;
+	}
 }
 
 .page__body {

@@ -1,19 +1,52 @@
 .header {
 	background-color: var(--dark-color);
 
-	&__container {
-		@include flex-v-center;
+	// @include mobile {
+	// 	padding-top: 13px;
+	// 	padding-bottom: 12px;
+	// }
 
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		align-items: center;
 		min-height: 80px;
 
+		@include small-tablet {
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: repeat(1, 80px);
+			padding: 0;
+			width: 100%;
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 45px);
+
+			padding-top: 13px;
+			padding-bottom: 12px;
+		}
+
 		.logo {
-			margin-right: 139px;
+			grid-column: 1 / 3;
 			outline: none;
 
 			@include tablet {
 				width: 166px;
 				height: 27px;
-				margin-right: 82px;
+			}
+
+			@include small-tablet {
+				padding-left: var(--container-offset);
+			}
+
+			@include mobile {
+				width: 132px;
+				height: 18px;
+			}
+
+			@include small-tablet {
+				grid-column: 2 span;
 			}
 		}
 	}

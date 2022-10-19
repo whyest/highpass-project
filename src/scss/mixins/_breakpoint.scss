@@ -30,7 +30,19 @@
 }
 
 @mixin small-tablet {
+	@media (max-width: (992px)) {
+		@content;
+	}
+}
+
+@mixin mini-tablet {
 	@media (max-width: (768px)) {
+		@content;
+	}
+}
+
+@mixin big-mobile {
+	@media (max-width: (635px)) {
 		@content;
 	}
 }

@@ -1,9 +1,22 @@
 .nav {
-	width: calc(57% + 8px);
+	grid-column: 4 / 11;
+
+	@include small-tablet {
+		grid-column: 6 span;
+		grid-row: 2 / 3;
+		padding: 12px var(--container-offset);
+		background-color: var(--tundora-color);
+	}
+
+	@include mobile {
+		display: none;
+		grid-column: 2 span;
+		grid-row: 2 / 3;
+		height: 45px;
+	}
+
 	&__list {
 		@include flex-all-sb;
-
-		width: 100%;
 	}
 
 	&__item {

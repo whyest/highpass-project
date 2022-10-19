@@ -1,6 +1,6 @@
 .about {
-	padding-bottom: 38px;
 	padding-top: 34px;
+	padding-bottom: 38px;
 	min-height: 500px;
 	background-color: var(--dark-color);
 
@@ -8,10 +8,24 @@
 		padding-bottom: 81px;
 	}
 
+	@include small-tablet {
+		padding-bottom: 62px;
+	}
+
+	@include mobile {
+		padding-top: 32px;
+		padding-bottom: 60px;
+	}
+
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: var(--grid-gap);
+
+		@include big-mobile {
+			grid-template-columns: repeat(6, 1fr);
+			gap: 22px;
+		}
 	}
 
 	&__item {
@@ -22,6 +36,12 @@
 		margin: 0;
 		margin-bottom: 4px;
 		color: var(--light-color);
+
+		@include mobile {
+			margin-bottom: 2px;
+			font-size: 18px;
+			line-height: 23px;
+		}
 	}
 
 	&__descr {
@@ -32,6 +52,11 @@
 		font-size: 16px;
 		line-height: 28px;
 		color: var(--silver-color);
+
+		@include mobile {
+			font-size: 14px;
+			line-height: 25px;
+		}
 	}
 
 	&__img {
@@ -44,6 +69,14 @@
 		@include high-tablet {
 			height: 332px;
 		}
+
+		@include small-tablet {
+			height: 569px;
+		}
+
+		@include big-mobile {
+			height: 278px;
+		}
 	}
 
 	&__subtitle {
@@ -55,6 +88,10 @@
 		font-size: 24px;
 		line-height: 22px;
 		color: var(--light-color);
+
+		@include mobile {
+			font-size: 18px;
+		}
 	}
 
 	&__form {
@@ -103,6 +140,21 @@
 		border: 1px solid transparent;
 		outline: none;
 
+		@include tablet {
+			width: 73%;
+			margin-bottom: 19px;
+		}
+
+		@include small-tablet {
+			width: 100%;
+		}
+
+		@include mobile {
+			height: 40px;
+			font-size: 14px;
+			line-height: 16px;
+		}
+
 		&:focus-visible {
 			color: var(--silver-color);
 			border: 1px solid var(--accent-color);
@@ -126,11 +178,6 @@
 
 		&:hover::placeholder {
 			color: var(--accent-color);
-		}
-
-		@include tablet {
-			width: 73%;
-			margin-bottom: 19px;
 		}
 	}
 
@@ -161,6 +208,14 @@
 
 		@include tablet {
 			padding: 10px 19px;
+		}
+
+		@include tablet {
+			padding: 10px 14px;
+			min-width: 115px;
+			height: 40px;
+			font-size: 14px;
+			line-height: 16px;
 		}
 	}
 }

@@ -7,17 +7,49 @@
 		padding-bottom: 68px;
 	}
 
+	@include small-tablet {
+		padding-top: 34px;
+		padding-bottom: 69px;
+	}
+
+	@include mobile {
+		padding-top: 19px;
+		padding-bottom: 50px;
+	}
+
+	&__container {
+		@include mobile {
+			width: 100%;
+			padding: 0;
+		}
+	}
+
 	&__title {
 		margin-bottom: 24px;
+
+		@include mobile {
+			margin-bottom: 14px;
+			padding: 0 var(--container-offset);
+			font-size: 18px;
+			line-height: 23px;
+		}
 	}
 
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		gap: 30px;
+		gap: var(--grid-gap);
 
 		@include tablet {
 			grid-template-columns: repeat(8, 1fr);
+		}
+
+		@include small-tablet {
+			grid-template-columns: repeat(6, 1fr);
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
@@ -30,6 +62,14 @@
 		@include tablet {
 			grid-column: 5 span;
 		}
+
+		@include small-tablet {
+			grid-column: 6 span;
+		}
+
+		@include mobile {
+			grid-column: 2 span;
+		}
 	}
 
 	&__item {
@@ -37,6 +77,18 @@
 
 		@include tablet {
 			grid-column: 3 span;
+		}
+
+		@include small-tablet {
+			grid-column: 4 span;
+		}
+
+		@include mobile {
+			grid-column: 2 span;
+			&:last-child {
+				padding: 0 var(--container-offset);
+				padding-top: 4px;
+			}
 		}
 	}
 
@@ -77,15 +129,26 @@
 				height: 34%;
 			}
 
-			&__wrapper {
-				@include tablet {
-					max-width: 58%;
-				}
+			@include mobile {
+				padding: 0 19px;
+				padding-top: 25px;
+				padding-bottom: 4px;
+				height: calc(33% - 6px);
 			}
 
-			// &__content {
-			// 	max-width: 56%;
-			// }
+			&__wrapper {
+				@include tablet {
+					max-width: 60%;
+				}
+
+				@include small-tablet {
+					max-width: 65%;
+				}
+
+				@include big-mobile {
+					max-width: 100%;
+				}
+			}
 
 			&__title {
 				margin: 0;
@@ -101,6 +164,12 @@
 				@include tablet {
 					margin-top: 0;
 				}
+
+				@include mobile {
+					margin-bottom: 9px;
+					font-size: 18px;
+					line-height: 22px;
+				}
 			}
 
 			&__descr {
@@ -115,6 +184,18 @@
 				@include tablet {
 					display: inline;
 					margin-right: 10px;
+				}
+
+				@include small-tablet {
+					display: block;
+					margin-right: 0;
+				}
+
+				@include mobile {
+					margin-bottom: 10px;
+					max-width: 95%;
+					font-size: 14px;
+					line-height: 18px;
 				}
 			}
 
@@ -135,6 +216,13 @@
 				background-position: left center;
 				background-size: 22px 22px;
 				background-repeat: no-repeat;
+
+				@include mobile {
+					padding-left: 20px;
+					font-size: 14px;
+					line-height: 20px;
+					background-size: 20px 20px;
+				}
 
 				&::after {
 					content: '';
@@ -191,6 +279,12 @@
 		line-height: 22px;
 		color: var(--dark-color);
 		transform: translateY(-6px);
+
+		@include mobile {
+			margin-bottom: 10px;
+			font-size: 18px;
+			transform: translateY(0);
+		}
 	}
 
 	&__descr {
@@ -200,6 +294,11 @@
 		font-size: 16px;
 		line-height: 22px;
 		color: var(--dusty-color);
+
+		@include mobile {
+			font-size: 14px;
+			line-height: 18px;
+		}
 	}
 
 	&__form {
@@ -212,6 +311,10 @@
 
 		@include tablet {
 			max-width: 342px;
+		}
+
+		@include small-tablet {
+			max-width: 466px;
 		}
 	}
 
@@ -253,6 +356,12 @@
 		background-color: var(--mercury-color);
 		outline: none;
 		transition: color 0.3s ease-in-out;
+
+		@include mobile {
+			height: 40px;
+			font-size: 14px;
+			line-height: 16px;
+		}
 
 		&:focus-visible {
 			color: var(--dark-color);
@@ -310,6 +419,13 @@
 	&__btn {
 		padding: 12px 19px;
 		min-width: 126px;
+
+		@include mobile {
+			padding: 9px 14px;
+			min-width: 115px;
+			font-size: 14px;
+			line-height: 16px;
+		}
 	}
 }
 
