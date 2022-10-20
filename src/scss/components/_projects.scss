@@ -177,6 +177,17 @@
 		&:nth-child(3) {
 			width: 466px;
 			height: 184px;
+
+			@include mobile {
+				width: 534px;
+			}
+		}
+
+		&:nth-child(6),
+		&:nth-child(7) {
+			@include mobile {
+				width: 534px;
+			}
 		}
 	}
 
