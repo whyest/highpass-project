@@ -1,11 +1,6 @@
 .header {
 	background-color: var(--dark-color);
 
-	// @include mobile {
-	// 	padding-top: 13px;
-	// 	padding-bottom: 12px;
-	// }
-
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -21,10 +16,8 @@
 
 		@include mobile {
 			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(2, 45px);
-
-			padding-top: 13px;
-			padding-bottom: 12px;
+			grid-template-rows: repeat(1, 70px);
+			grid-auto-rows: 45px;
 		}
 
 		.logo {
@@ -47,6 +40,10 @@
 
 			@include small-tablet {
 				grid-column: 2 span;
+			}
+
+			@include mobile {
+				grid-column: 1;
 			}
 		}
 	}

@@ -122,5 +122,11 @@
 			padding-top: 31px;
 			padding-bottom: 31px;
 		}
+
+		.social {
+			@include mobile {
+				max-width: 235px;
+			}
+		}
 	}
 }

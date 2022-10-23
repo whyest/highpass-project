@@ -2,7 +2,7 @@ let point = [55.76958295366031, 37.63949197354125];
 
 function init() {
 	let map = new ymaps.Map('map', {
-		center: [55.766263424694785, 37.63093268928248],
+		center: point,
 		zoom: 15,
 	});
 

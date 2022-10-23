@@ -1,9 +1,14 @@
-.header-form {
+.search {
 	grid-column: 12;
 	margin-left: auto;
 
 	@include small-tablet {
 		grid-column: 6;
+		grid-row: 1;
+	}
+
+	@include mobile {
+		grid-column: 2;
 		grid-row: 1;
 	}
 
