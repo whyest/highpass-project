@@ -24,7 +24,23 @@
       <a href="tel:+749542423532" class="phone nav__phone">+7 495 424-23-532</a>
       <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close></button>
     </nav>
-    <form action="#" class="search">
+    <div class="search">
+      <button class="btn-reset search__btn js-search-btn">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <form action="#" class="search-form js-form">
+        <input class="search-form__input js-input" type="text" placeholder="Что будем искать?"
+          onfocus="this.placeholder=''" onblur="this.placeholder='Что будем искать?'">
+        <button class="btn-reset search-form__close js-search-close">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <!-- <form action="#" class="search">
       <label class="search__label">
         <input type="text" name="search" class="input-reset search__input" placeholder="Что будем искать?">
       </label>
@@ -33,7 +49,7 @@
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
       </button>
-    </form>
+    </form> -->
     <div class="header__wrapper">
       <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false" data-burger>
         <span class="burger__line"></span>
