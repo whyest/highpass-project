@@ -121,6 +121,10 @@
 		@include tablet {
 			transform: translate(24px, -65px);
 		}
+
+		@include mobile {
+			transform: translate(24px, -58px);
+		}
 	}
 
 	.just-validate-error-field {
